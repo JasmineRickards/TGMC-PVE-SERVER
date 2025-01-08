@@ -575,7 +575,7 @@
 	},
 /area/shuttle/dropship/alamo)
 "se" = (
-/obj/machinery/vending/marineFood,
+/obj/machinery/vending/uniform_supply,
 /turf/open/shuttle/dropship/floor/out,
 /area/shuttle/dropship/alamo)
 "sk" = (
