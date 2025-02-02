@@ -15,21 +15,10 @@ engineer = 0, construction = 0, leadership = 0, medical = 0, surgery = 0, pilot 
 		. = new /datum/skills(unarmed, melee_weapons,\
 			firearms, combat, pistols, shotguns, rifles, smgs, heavy_weapons, smartgun,\
 			engineer, construction, leadership, medical, surgery, pilot, police, powerloader, large_vehicle, stamina)
--[combat]-[pistols]-[shotguns]-[rifles]-[smgs]-[heavy_weapons]-[smartgun]\
--[engineer]-[construction]-[leadership]-[medical]-[surgery]-[pilot]-[police]-[powerloader]-[large_vehicle]-[mech]-[stamina]"
 
 #define SKILLSIDSRC(S) "skills-[S.unarmed]-[S.melee_weapons]\
 -[S.combat]-[S.pistols]-[S.shotguns]-[S.rifles]-[S.smgs]-[S.heavy_weapons]-[S.smartgun]\
 -[S.engineer]-[S.construction]-[S.leadership]-[S.medical]-[S.surgery]-[S.pilot]-[S.police]-[S.powerloader]-[S.large_vehicle]-[S.mech]-[S.stamina]"
-
-/proc/getSkills(unarmed = 0, melee_weapons = 0,\
-combat = 0, pistols = 0, shotguns = 0, rifles = 0, smgs = 0, heavy_weapons = 0, smartgun = 0,\
-engineer = 0, construction = 0, leadership = 0, medical = 0, surgery = 0, pilot = 0, police = 0, powerloader = 0, large_vehicle = 0, mech = 0, stamina = 0)
-	. = locate(SKILLSID)
-	if(!.)
-		. = new /datum/skills(unarmed, melee_weapons,\
-			combat, pistols, shotguns, rifles, smgs, heavy_weapons, smartgun,\
-			engineer, construction, leadership, medical, surgery, pilot, police, powerloader, large_vehicle, mech, stamina)
 
 /proc/getSkillsType(skills_type = /datum/skills)
 	var/datum/skills/new_skill = skills_type
@@ -189,8 +178,7 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 /datum/skills/proc/setRating(unarmed, melee_weapons,\
 firearms, combat, pistols, shotguns, rifles, smgs, heavy_weapons, smartgun,\
 engineer, construction, leadership, medical, surgery, pilot, police, powerloader, large_vehicle, stamina)
-combat, firearms, pistols, shotguns, rifles, smgs, heavy_weapons, smartgun,\
-engineer, construction, leadership, medical, surgery, pilot, police, powerloader, large_vehicle, mech, stamina)
+
 	return getSkills((isnull(unarmed) ? src.unarmed : unarmed),\
 		(isnull(melee_weapons) ? src.melee_weapons : melee_weapons),\
 		(isnull(firearms) ? src.firearms : firearms),\

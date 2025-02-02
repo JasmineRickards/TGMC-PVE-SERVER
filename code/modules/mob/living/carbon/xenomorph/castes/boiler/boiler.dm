@@ -46,7 +46,7 @@
 /mob/living/carbon/xenomorph/boiler/sizzler/Initialize(mapload)
 	. = ..()
 	ammo = GLOB.ammo_list[/datum/ammo/xeno/acid/airburst]
- /mob/living/carbon/xenomorph/sizzler/on_death()
+/mob/living/carbon/xenomorph/sizzler/on_death()
 	///We QDEL them as cleanup and preventing them from being sold
 	QDEL_IN(src, TIME_TO_DISSOLVE)
 	return ..()
