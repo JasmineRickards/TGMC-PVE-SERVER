@@ -6,7 +6,7 @@
 	damage_icon_path = 'icons/obj/armored/3x3/tank_damage.dmi'
 	icon_state = "tank"
 	hitbox = /obj/hitbox
-	interior = /datum/interior/armored
+//	interior = /datum/interior/armored
 	minimap_icon_state = "tank"
 	required_entry_skill = SKILL_LARGE_VEHICLE_TRAINED
 	atom_flags = DIRLOCK|BUMP_ATTACKABLE|PREVENT_CONTENTS_EXPLOSION|CRITICAL_ATOM
@@ -14,7 +14,7 @@
 	appearance_flags = PIXEL_SCALE
 	pixel_x = -56
 	pixel_y = -48
-	max_integrity = 900
+	max_integrity = 1400
 	soft_armor = list(MELEE = 50, BULLET = 100 , LASER = 90, ENERGY = 60, BOMB = 60, BIO = 60, FIRE = 50, ACID = 50)
 	hard_armor = list(MELEE = 0, BULLET = 20, LASER = 20, ENERGY = 20, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
 	permitted_mods = list(
@@ -32,9 +32,9 @@
 		/obj/item/armored_weapon/tow,
 		/obj/item/armored_weapon/microrocket_pod,
 	)
-	max_occupants = 4
-	move_delay = 0.75 SECONDS
 	glide_size = 2.5
+	max_occupants = 6
+	move_delay = 0.75 SECONDS
 	vis_range_mod = 2
 	ram_damage = 100
 	easy_load_list = list(
@@ -42,6 +42,7 @@
 	)
 	///pass_flags given to desants, in addition to the vehicle's pass_flags
 	var/desant_pass_flags = PASS_FIRE|PASS_LOW_STRUCTURE
+
 	///particle holder for smoke effects
 	var/obj/effect/abstract/particle_holder/smoke_holder
 	///Holder for smoke del timer
