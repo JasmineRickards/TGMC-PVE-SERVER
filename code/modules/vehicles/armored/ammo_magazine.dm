@@ -36,7 +36,7 @@
 	default_ammo = /datum/ammo/tx54/tank_cannister
 
 /obj/item/ammo_magazine/tank/ltaap_chaingun
-	name = "\improper LTA-AP chaingun Magazine"
+	name = "\improper LTA-AP chaingun magazine"
 	desc = "A primary armament chaingun magazine."
 	caliber = CALIBER_762X51
 	icon_state = "ltaap"
@@ -45,6 +45,13 @@
 	max_rounds = 450
 	loading_sound = 'sound/weapons/guns/interact/working_the_bolt.ogg'
 
+/obj/item/ammo_magazine/tank/ltaap_chaingun/hv
+	name = "\improper LTA-AP HV chaingun Magazine"
+	desc = "A primary armament chaingun magazine. Loaded with high velocity, non-IFF rounds."
+	icon_state = "ltaap_hv"
+	default_ammo = /datum/ammo/bullet/minigun/ltaap/hv
+	max_rounds = 200
+	magazine_flags = MAGAZINE_REFILLABLE|MAGAZINE_NOT_FABRICABLE
 
 /obj/item/ammo_magazine/tank/flamer
 	name = "Flamer Magazine"
@@ -188,3 +195,32 @@
 	max_rounds = 1
 	loading_sound = 'sound/vehicles/weapons/ltb_reload.ogg'
 
+/obj/item/ammo_magazine/tank/tow_missile
+	name = "\improper TOW-III missile"
+	desc = "A TOw-III homing missile for the secondary TOW launcher."
+	caliber = CALIBER_68MM
+	icon_state = "seekerammo"
+	w_class = WEIGHT_CLASS_GIGANTIC
+	default_ammo = /datum/ammo/rocket/homing/tow
+	max_rounds = 1
+	loading_sound = 'sound/weapons/guns/interact/launcher_reload.ogg'
+
+/obj/item/ammo_magazine/tank/microrocket_rack
+	name = "microrocket pod rack"
+	desc = "A 3x2 rack containing high explosive homing microrockets."
+	caliber = CALIBER_32MM
+	icon_state = "secondary_rocketpod"
+	w_class = WEIGHT_CLASS_GIGANTIC
+	default_ammo = /datum/ammo/rocket/homing/microrocket
+	max_rounds = 6
+	loading_sound = 'sound/weapons/guns/interact/launcher_reload.ogg'
+
+/obj/item/ammo_magazine/tank/bfg
+	name = "\improper BFG antimatter container"
+	desc = "An antimatter containment chamber containing antimatter for a BFG glob. Do not open at threat of exploding."
+	icon_state = "bfg"
+	w_class = WEIGHT_CLASS_GIGANTIC
+	caliber = CALIBER_ANTIMATTER
+	default_ammo = /datum/ammo/energy/bfg
+	max_rounds = 1
+	loading_sound = 'sound/vehicles/weapons/ltb_reload.ogg'

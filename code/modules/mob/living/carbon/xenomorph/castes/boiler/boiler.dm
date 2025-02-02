@@ -40,3 +40,13 @@
 	QDEL_IN(src, TIME_TO_DISSOLVE)
 	return ..()
 
+/mob/living/carbon/xenomorph/boiler/sizzler
+	caste_base_type = /datum/xeno_caste/boiler/sizzler
+
+/mob/living/carbon/xenomorph/boiler/sizzler/Initialize(mapload)
+	. = ..()
+	ammo = GLOB.ammo_list[/datum/ammo/xeno/acid/airburst]
+ /mob/living/carbon/xenomorph/sizzler/on_death()
+	///We QDEL them as cleanup and preventing them from being sold
+	QDEL_IN(src, TIME_TO_DISSOLVE)
+	return ..()

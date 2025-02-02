@@ -17,12 +17,24 @@
 	max_integrity = 1400
 	soft_armor = list(MELEE = 50, BULLET = 100 , LASER = 90, ENERGY = 60, BOMB = 60, BIO = 60, FIRE = 50, ACID = 50)
 	hard_armor = list(MELEE = 0, BULLET = 20, LASER = 20, ENERGY = 20, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
-	permitted_mods = list(/obj/item/tank_module/overdrive, /obj/item/tank_module/ability/zoom, /obj/item/tank_module/ability/smoke_launcher)
-	permitted_weapons = list(/obj/item/armored_weapon, /obj/item/armored_weapon/ltaap, /obj/item/armored_weapon/secondary_weapon, /obj/item/armored_weapon/secondary_flamer)
+	permitted_mods = list(
+		/obj/item/tank_module/overdrive,
+		/obj/item/tank_module/ability/zoom,
+		/obj/item/tank_module/ability/smoke_launcher,
+	)
+	permitted_weapons = list(
+		/obj/item/armored_weapon,
+		/obj/item/armored_weapon/ltaap,
+		/obj/item/armored_weapon/bfg,
 
+		/obj/item/armored_weapon/secondary_weapon,
+		/obj/item/armored_weapon/secondary_flamer,
+		/obj/item/armored_weapon/tow,
+		/obj/item/armored_weapon/microrocket_pod,
+	)
 	glide_size = 2.5
 	max_occupants = 6
-	move_delay = 0.9 SECONDS
+	move_delay = 0.75 SECONDS
 	vis_range_mod = 2
 	ram_damage = 100
 	easy_load_list = list(
